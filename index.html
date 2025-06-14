@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirajum Munir - Backend Engineer | ML Enthusiast</title>
+    
+    <!-- Add these favicon links -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    
+    <!-- Existing links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Background Elements -->
+    <div id="stars-container"></div>
+    <div id="planets-container">
+        <!-- ...existing planets... -->
+    </div>
+    <div id="cursor-glow"></div>
+    <div id="shooting-stars"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-cyan-400">
+                    <div class="logo-container">
+                        <img src="images/logo.png" alt="SM" class="h-8 w-auto">
+                        <div class="logo-ring"></div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                    <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative">
+        <div class="text-center z-10">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 flex flex-wrap justify-center items-baseline">
+                <span class="text-white">Sirajum&nbsp;</span>
+                <span class="text-transparent">Munir</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-6 text-cyan-300">
+                Backend Engineer | Competitive Programmer | ML Enthusiast
+            </p>
+            <!-- <p class="text-lg mb-8 text-gray-300">
+                AKA Nezent
+            </p> -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="btn-primary">
+                    <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                </a>
+                <a href="#" class="btn-primary">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-download mr-2"></i> Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">About Me</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-8">
+                    <p class="text-lg leading-relaxed mb-6">
+                        I'm a passionate Backend Engineer with extensive experience in building scalable, 
+                        high-performance systems. My journey into Machine Learning has opened new horizons, 
+                        allowing me to combine the robustness of backend development with the intelligence of ML.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        As a competitive programmer, I've honed my problem-solving skills across multiple platforms,
+                        tackling complex algorithmic challenges that strengthen my ability to write efficient,
+                        optimized code.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        I'm passionate about combining ML with backend systems to create intelligent, 
+                        data-driven applications that can scale and perform under pressure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Skills & Tools</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages Card -->
+                <div class="glass-card p-6 hover:border-cyan-400 group">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-300">Languages</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">C/C++</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">Python</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">Golang</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases Card -->
+                <div class="glass-card p-6 hover:border-purple-400 group">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-database text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-300">Databases</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">PostgreSQL</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">MySQL</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">MongoDB</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies Card -->
+                <div class="glass-card p-6 hover:border-green-400 group">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-300">Tools & Technologies</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">Docker</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">GitHub</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-green-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between group-hover:translate-x-2 transition-transform">
+                            <span class="text-gray-300">AWS</span>
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card">
+                    <div class="project-image bg-gradient-to-br from-purple-600 to-blue-600"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">ML-Powered API Gateway</h3>
+                        <p class="text-gray-400 mb-4">
+                            Intelligent API gateway with ML-based request routing and load balancing
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image bg-gradient-to-br from-green-600 to-teal-600"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Distributed Task Queue</h3>
+                        <p class="text-gray-400 mb-4">
+                            High-throughput task processing system with auto-scaling capabilities
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag">Go</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image bg-gradient-to-br from-red-600 to-pink-600"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Real-time Analytics Engine</h3>
+                        <p class="text-gray-400 mb-4">
+                            Stream processing engine for real-time data analytics and insights
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Apache Kafka</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">WebSocket</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Experience</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="experience-item">
+                    <div class="glass-card p-8">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-cyan-300">Senior Backend Engineer</h3>
+                            <span class="text-gray-400">2023 - Present</span>
+                        </div>
+                        <h4 class="text-lg text-gray-300 mb-4">TechCorp Solutions</h4>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Architected and developed microservices handling 10M+ requests daily</li>
+                            <li>Implemented ML-based recommendation system increasing user engagement by 40%</li>
+                            <li>Led team of 5 developers in building scalable API infrastructure</li>
+                            <li>Optimized database queries reducing response time by 60%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="glass-card p-8">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-cyan-300">Backend Developer</h3>
+                            <span class="text-gray-400">2022 - 2023</span>
+                        </div>
+                        <h4 class="text-lg text-gray-300 mb-4">StartupXYZ</h4>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Built REST APIs serving 100K+ daily active users</li>
+                            <li>Integrated payment systems and third-party services</li>
+                            <li>Implemented automated testing reducing deployment bugs by 75%</li>
+                            <li>Mentored junior developers in best practices and code review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Education</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="glass-card p-8 text-center">
+                    <h3 class="text-2xl font-bold text-cyan-300 mb-4">
+                        Rajshahi University of Engineering & Technology (RUET)
+                    </h3>
+                    <p class="text-lg text-gray-300 mb-2">Bachelor of Science in Electrical & Computer Engineering</p>
+                    <p class="text-gray-400 mb-4">4th Year Student</p>
+                    <p class="text-gray-400">CGPA: 3.34/4.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Certifications & Achievements</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Contest Achievement -->
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-trophy text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">ICPC Regional 2023</h4>
+                            <p class="text-sm text-gray-400">15th Position</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Achieved top position in the prestigious programming contest representing RUET.</p>
+                </div>
+
+                <!-- Online Course Certificate -->
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">Machine Learning Specialization</h4>
+                            <p class="text-sm text-gray-400">Coursera - Stanford</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Completed comprehensive ML course covering supervised learning, neural networks, and more.</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300 flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        View Certificate
+                    </a>
+                </div>
+
+                <!-- HackerRank Certificate -->
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-hackerrank text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">Problem Solving (Advanced)</h4>
+                            <p class="text-sm text-gray-400">HackerRank</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Achieved advanced certification in algorithms and data structures.</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300 flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Verify Certificate
+                    </a>
+                </div>
+
+                <!-- AWS Certificate -->
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-aws text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">AWS Solutions Architect</h4>
+                            <p class="text-sm text-gray-400">Amazon Web Services</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Certified in designing distributed systems on AWS.</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300 flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Verify Credentials
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Testimonials</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">AH</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">Ahmed Hassan</h4>
+                            <p class="text-sm text-gray-400">Senior Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Sirajum is a detail-oriented and reliable developer who consistently delivers 
+                        high-quality solutions. His problem-solving skills are exceptional."
+                    </p>
+                </div>
+
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">SR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">Sarah Rahman</h4>
+                            <p class="text-sm text-gray-400">Tech Lead</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Working with Sirajum has been a pleasure. His expertise in backend systems 
+                        and ML integration is remarkable. Highly recommended!"
+                    </p>
+                </div>
+
+                <div class="glass-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">MK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cyan-300">Mohammad Khan</h4>
+                            <p class="text-sm text-gray-400">Project Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Sirajum's ability to translate complex requirements into efficient solutions 
+                        is outstanding. A true professional with great communication skills."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-300">Let's Connect</h3>
+                    <p class="text-gray-300 mb-8">
+                        I'm always interested in discussing new opportunities, innovative projects, 
+                        or just having a chat about technology and development.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-cyan-400 text-xl mr-4"></i>
+                            <span>sirajum.munir@example.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-cyan-400 text-xl mr-4"></i>
+                            <span>linkedin.com/in/sirajummunir</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-github text-cyan-400 text-xl mr-4"></i>
+                            <span>github.com/sirajummunir</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="glass-card p-8">
+                        <div class="mb-6">
+                            <input type="text" placeholder="Your Name" 
+                                   class="w-full bg-transparent border-2 border-gray-600 focus:border-cyan-400 outline-none py-3 px-4 rounded-lg transition-colors">
+                        </div>
+                        <div class="mb-6">
+                            <input type="email" placeholder="Your Email" 
+                                   class="w-full bg-transparent border-2 border-gray-600 focus:border-cyan-400 outline-none py-3 px-4 rounded-lg transition-colors">
+                        </div>
+                        <div class="mb-6">
+                            <textarea placeholder="Your Message" rows="4"
+                                      class="w-full bg-transparent border-2 border-gray-600 focus:border-cyan-400 outline-none py-3 px-4 rounded-lg transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400">
+                    © 2025 Sirajum Munir. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="animation-boundary"></div>
+
+    <div class="floating-astronaut">
+        <img src="images/astranut.png" alt="Floating Astronaut">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
