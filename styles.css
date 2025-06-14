@@ -781,14 +781,14 @@ nav img:hover {
 }
 
 .floating-astronaut {
-    position: fixed;
+    position: absolute;  /* Change from fixed to absolute */
+    top: 50%;           /* Position in middle of hero section */
+    left: 10%;
     width: 120px;
     height: 120px;
-    top: 70%;
-    left: 15%;
-    z-index: 3;
+    z-index: 10;
     pointer-events: none;
-    animation: float-space 15s ease-in-out infinite;
+    animation: astronaut-float 3s ease-in-out infinite;
 }
 
 .floating-astronaut img {
@@ -845,4 +845,9 @@ nav img:hover {
     color: transparent;
     -webkit-text-stroke: 1px white; /* Reduced from 2px to 1px for better look */
     border: none !important; /* Remove the box */
+}
+
+.min-h-screen {
+    position: relative;  /* Add this to contain the astronaut */
+    overflow: hidden;    /* Prevent astronaut from overflowing */
 }
