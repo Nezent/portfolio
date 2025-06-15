@@ -723,11 +723,10 @@ a:focus {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    overflow: hidden;
-    z-index: 1;
+    z-index: 0;
 }
 
 nav img {
@@ -782,7 +781,7 @@ nav img:hover {
 
 .floating-astronaut {
     position: absolute;  /* Change from fixed to absolute */
-    top: 50%;           /* Position in middle of hero section */
+    top: 70%;           /* Position in middle of hero section */
     left: 10%;
     width: 120px;
     height: 120px;
@@ -850,4 +849,15 @@ nav img:hover {
 .min-h-screen {
     position: relative;  /* Add this to contain the astronaut */
     overflow: hidden;    /* Prevent astronaut from overflowing */
+}
+
+@keyframes nebulaPulse {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2) rotate(15deg);
+        opacity: 0.6;
+    }
 }

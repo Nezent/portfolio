@@ -3,6 +3,7 @@
 class PortfolioAnimations {
     constructor() {
         this.init();
+        this.createNebulas();  // Add this line in constructor
     }
 
     init() {
@@ -21,31 +22,38 @@ class PortfolioAnimations {
     // Create animated stars background
     createStars() {
         const starsContainer = document.getElementById('animation-boundary');
-        const starCount = 200;
+        // Responsive star count based on screen width
+        const starCount = window.innerWidth < 768 ? 40 : 100;  // 50 stars on mobile, 100 on desktop
+
+        // Clear existing stars if any
+        starsContainer.innerHTML = '';
 
         for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
             star.className = 'star';
             
-            // Random star size
-            const size = Math.random();
-            if (size < 0.5) {
-                star.classList.add('small');
-            } else if (size < 0.8) {
-                star.classList.add('medium');
-            } else {
-                star.classList.add('large');
-            }
-
             // Random position
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            
+            // Random size (made slightly smaller)
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
             
             // Random animation delay
-            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDelay = `${Math.random() * 3}s`;
             
             starsContainer.appendChild(star);
         }
+
+        // Update stars on window resize
+        window.addEventListener('resize', () => {
+            const newStarCount = window.innerWidth < 768 ? 50 : 100;
+            if (starCount !== newStarCount) {
+                this.createStars();
+            }
+        });
     }
 
     // Create orbiting planets
@@ -154,12 +162,23 @@ class PortfolioAnimations {
     setupParticleSystem() {
         const boundaryContainer = document.getElementById('animation-boundary');
         
+        // Responsive particle count
+        const getParticleInterval = () => {
+            return window.innerWidth < 768 ? 1000 : 500; // Less frequent on mobile
+        };
+        
         const createParticle = () => {
+            // Responsive particle count
+            const maxParticles = window.innerWidth < 768 ? 10 : 20; // Fewer particles on mobile
+            const currentParticles = boundaryContainer.getElementsByClassName('particle').length;
+            
+            if (currentParticles >= maxParticles) return;
+            
             const particle = document.createElement('div');
             particle.className = 'particle';
             
-            // Random size
-            const size = Math.random() * 4 + 1;
+            // Random size (smaller than before)
+            const size = Math.random() * 3 + 1; // Reduced max size from 4 to 3
             particle.style.width = size + 'px';
             particle.style.height = size + 'px';
             
@@ -169,10 +188,17 @@ class PortfolioAnimations {
             
             boundaryContainer.appendChild(particle);
             
-            setTimeout(() => particle.remove(), 5000);
+            // Remove after shorter duration
+            setTimeout(() => particle.remove(), 3000); // Reduced from 5000 to 3000
         };
 
-        setInterval(createParticle, 500);
+        let intervalId = setInterval(createParticle, getParticleInterval());
+
+        // Update interval on resize
+        window.addEventListener('resize', () => {
+            clearInterval(intervalId);
+            intervalId = setInterval(createParticle, getParticleInterval());
+        });
     }
 
     // Setup scroll animations
@@ -308,6 +334,52 @@ class PortfolioAnimations {
                 mouseFollower.style.background = 'radial-gradient(circle, rgba(8, 145, 178, 0.2) 0%, transparent 70%)';
             });
         });
+    }
+
+    // Add this new method
+    createNebulas() {
+        const container = document.getElementById('animation-boundary');
+        
+        // First Nebula (Purple-Blue)
+        const nebula1 = document.createElement('div');
+        nebula1.className = 'nebula nebula-1';
+        nebula1.style.cssText = `
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            top: 16%;
+            left: 8%;
+            background: radial-gradient(circle at center,
+                rgba(147, 51, 234, 0.2) 0%,
+                rgba(79, 70, 229, 0.1) 45%,
+                transparent 70%
+            );
+            filter: blur(60px);
+            animation: nebulaPulse 15s ease-in-out infinite;
+            z-index: 1;
+        `;
+        
+        // Second Nebula (Cyan-Green)
+        const nebula2 = document.createElement('div');
+        nebula2.className = 'nebula nebula-2';
+        nebula2.style.cssText = `
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            top: 60%;
+            right: 8%;
+            background: radial-gradient(circle at center,
+                rgba(6, 182, 212, 0.2) 0%,
+                rgba(16, 185, 129, 0.1) 45%,
+                transparent 70%
+            );
+            filter: blur(50px);
+            animation: nebulaPulse 12s ease-in-out infinite alternate;
+            z-index: 1;
+        `;
+
+        container.appendChild(nebula1);
+        container.appendChild(nebula2);
     }
 }
 
