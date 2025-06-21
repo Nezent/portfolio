@@ -544,17 +544,17 @@
                     </div>
                 </div>
                 <div>
-                    <form class="glass-card p-8">
+                    <form class="glass-card p-8" id="myForm" method="post">
                         <div class="mb-6">
-                            <input type="text" placeholder="Your Name" 
+                            <input type="text" name="name" placeholder="Your Name" 
                                    class="w-full bg-transparent border-2 border-gray-600 focus:border-cyan-400 outline-none py-3 px-4 rounded-lg transition-colors">
                         </div>
                         <div class="mb-6">
-                            <input type="email" placeholder="Your Email" 
+                            <input type="email" name="email" placeholder="Your Email" 
                                    class="w-full bg-transparent border-2 border-gray-600 focus:border-cyan-400 outline-none py-3 px-4 rounded-lg transition-colors">
                         </div>
                         <div class="mb-6">
-                            <textarea placeholder="Your Message" rows="4"
+                            <textarea placeholder="Your Message" name="message" rows="4"
                                       class="w-full bg-transparent border-2 border-gray-600 focus:border-cyan-400 outline-none py-3 px-4 rounded-lg transition-colors resize-none"></textarea>
                         </div>
                         <button type="submit" class="btn-primary w-full flex items-center justify-center">
@@ -595,5 +595,28 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch('https://script.google.com/macros/s/AKfycbwHxaYIZafcX7bxXzFC_NgIqGe6jKAqgdwDJv61_XAMsekdjUrO7l45WEoSQFZk7jYa8Q/exec', {
+        method: 'POST',
+        body: formData,
+        })
+        .then(res => res.text())
+        .then(response => {
+        form.reset();
+        })
+        .catch(error => {
+        alert("Error submitting form");
+        console.error(error);
+        });
+    });
+    </script>
+
 </body>
 </html>
