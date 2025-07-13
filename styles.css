@@ -861,3 +861,11 @@ nav img:hover {
         opacity: 0.6;
     }
 }
+
+nav a:focus,
+nav a:focus-visible,
+footer a:focus,
+footer a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
